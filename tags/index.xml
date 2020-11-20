@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Kristin Teves</title>
-    <link>https://github.com/kristinteves/Kristin_Portfolio/tags/</link>
+    <link>https://kristinteves.github.io/Kristin_Portfolio/tags/</link>
     <description>Recent content in Tags on Kristin Teves</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2020 10:58:08 -0400</lastBuildDate><atom:link href="https://github.com/kristinteves/Kristin_Portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Oct 2020 10:58:08 -0400</lastBuildDate><atom:link href="https://kristinteves.github.io/Kristin_Portfolio/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>R</title>
-      <link>https://github.com/kristinteves/Kristin_Portfolio/tags/r/</link>
+      <link>https://kristinteves.github.io/Kristin_Portfolio/tags/r/</link>
       <pubDate>Wed, 07 Oct 2020 10:58:08 -0400</pubDate>
       
-      <guid>https://github.com/kristinteves/Kristin_Portfolio/tags/r/</guid>
+      <guid>https://kristinteves.github.io/Kristin_Portfolio/tags/r/</guid>
       <description></description>
     </item>
     

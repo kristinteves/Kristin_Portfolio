@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Kristin Teves</title>
-    <link>https://github.com/kristinteves/Kristin_Portfolio/tags/r/</link>
+    <link>https://kristinteves.github.io/Kristin_Portfolio/tags/r/</link>
     <description>Recent content in R on Kristin Teves</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2020 10:58:08 -0400</lastBuildDate><atom:link href="https://github.com/kristinteves/Kristin_Portfolio/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Oct 2020 10:58:08 -0400</lastBuildDate><atom:link href="https://kristinteves.github.io/Kristin_Portfolio/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Project 1: Google Play Store 2018</title>
-      <link>https://github.com/kristinteves/Kristin_Portfolio/post/project-01/</link>
+      <link>https://kristinteves.github.io/Kristin_Portfolio/post/project-01/</link>
       <pubDate>Wed, 07 Oct 2020 10:58:08 -0400</pubDate>
       
-      <guid>https://github.com/kristinteves/Kristin_Portfolio/post/project-01/</guid>
+      <guid>https://kristinteves.github.io/Kristin_Portfolio/post/project-01/</guid>
       <description>Google Play Store consists of numerous applications within varying categories. As a digital distribution service for Android, users have access to a number of family, gaming, and tool apps, to name a few. There are approximately 2.7 million applications available as of February 2017. The 2018 scraped data within this dashboard reveals a sample of the state of the Google Play Store. Further exploration and analysis can be done to determine which categories contain the most or least amount of apps, installations, rating distributions, and more.</description>
     </item>
     
