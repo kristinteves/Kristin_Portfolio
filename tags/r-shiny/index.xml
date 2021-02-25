@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Kristin Teves</title>
-    <link>https://kristinteves.github.io/Kristin_Portfolio/tags/r/</link>
-    <description>Recent content in R on Kristin Teves</description>
+    <title>R Shiny on Kristin Teves</title>
+    <link>https://kristinteves.github.io/Kristin_Portfolio/tags/r-shiny/</link>
+    <description>Recent content in R Shiny on Kristin Teves</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2020 10:58:08 -0400</lastBuildDate><atom:link href="https://kristinteves.github.io/Kristin_Portfolio/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Oct 2020 10:58:08 -0400</lastBuildDate><atom:link href="https://kristinteves.github.io/Kristin_Portfolio/tags/r-shiny/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Project 1: Google Play Store 2018 EDA</title>
       <link>https://kristinteves.github.io/Kristin_Portfolio/projects/project-01/</link>
