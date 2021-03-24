@@ -8,23 +8,21 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Mar 2017 12:00:00 -0500</lastBuildDate><atom:link href="https://kristinteves.github.io/Kristin_Portfolio/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Project 2: Web Scraping Ulta Skin Care</title>
+      <title>Project 2: Web Scraping Ulta Skincare</title>
       <link>https://kristinteves.github.io/Kristin_Portfolio/projects/project-02/</link>
       <pubDate>Thu, 19 Nov 2020 11:00:59 -0400</pubDate>
       
       <guid>https://kristinteves.github.io/Kristin_Portfolio/projects/project-02/</guid>
-      <description>Background Ulta Beauty is notably known for carrying various cosmetic, fragrance, and skincare products. This web scraping project explores the skincare segmentation, and the products and characteristics of each category.
-  The picture above outlines the products that make up a basic skincare routine, including cleansers, moisturizers, sunscreen, serums, toners, essences, and treatments.
-Skincare Categories   Ulta carries more Moisturizer products, followed by Treatment &amp;amp; Serums and Cleansers. These make up the top 3 skincare categories in Ulta&amp;rsquo;s inventory.</description>
+      <description>Background A normal skincare routine is important for maintaining healthy and youthful skin, regardless of age. Ulta Beauty is a specialized beauty store known for carrying affordable cosmetic, fragrance, and skincare products. Ulta differentiates itself from its competitors by carrying many mid-tier, drugstore brands, which is important for consumers on a budget or those that may be starting a skincare regiment. This web scraping project explores the skincare segmentation of Ulta Beauty and the products and characteristics of each category.</description>
     </item>
     
     <item>
-      <title>Project 1: Google Play Store 2018 EDA</title>
+      <title>Project 1: Google Play Store 2018 Category Analysis</title>
       <link>https://kristinteves.github.io/Kristin_Portfolio/projects/project-01/</link>
       <pubDate>Wed, 07 Oct 2020 10:58:08 -0400</pubDate>
       
       <guid>https://kristinteves.github.io/Kristin_Portfolio/projects/project-01/</guid>
-      <description>Background   Google Play Store consists of numerous applications within varying categories. As a digital distribution service for Android, users have access to a number of family, gaming, and tool apps, to name a few. There were approximately 2.7 million applications available as of February 2017. The scraped Kaggle data reveals a sample of the Google Play Store as of 2018. The dataset reveals 33 categories in the Google Play Store.</description>
+      <description>Background   Google Play Store consists of numerous applications within varying categories. The digital distribution service for Android grants users access to millions of apps, in a number of categories, including many family, gaming, and tool, to name a few. There were approximately 2.7 million applications available as of February 2017. The scraped Kaggle data reveals the state of the Google Play Store as of 2018. The dataset highlights 33 categories in the Google Play Store that developers can explore for potential business growth.</description>
     </item>
     
   </channel>
