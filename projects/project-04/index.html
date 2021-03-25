@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Project 4: Detecting Health Insurance Fraud | Kristin Teves</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Machine Learning Approach to Reduce Costs for Both the Insurers and the Insured">
+    <meta name="generator" content="Hugo 0.78.2" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="https://kristinteves.github.io/Kristin_Portfolio/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Project 4: Detecting Health Insurance Fraud" />
+<meta property="og:description" content="Machine Learning Approach to Reduce Costs for Both the Insurers and the Insured" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kristinteves.github.io/Kristin_Portfolio/projects/project-04/" />
+<meta property="article:published_time" content="2021-03-12T11:00:59-04:00" />
+<meta property="article:modified_time" content="2021-03-12T11:00:59-04:00" />
+<meta itemprop="name" content="Project 4: Detecting Health Insurance Fraud">
+<meta itemprop="description" content="Machine Learning Approach to Reduce Costs for Both the Insurers and the Insured">
+<meta itemprop="datePublished" content="2021-03-12T11:00:59-04:00" />
+<meta itemprop="dateModified" content="2021-03-12T11:00:59-04:00" />
+<meta itemprop="wordCount" content="1902">
+
+
+
+<meta itemprop="keywords" content="Python,Machine Learning," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Project 4: Detecting Health Insurance Fraud"/>
+<meta name="twitter:description" content="Machine Learning Approach to Reduce Costs for Both the Insurers and the Insured"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_fraud.jpeg');">
+    <div class="pb3-m pb6-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://kristinteves.github.io/Kristin_Portfolio/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Kristin Teves
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://kristinteves.github.io/Kristin_Portfolio/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://kristinteves.github.io/Kristin_Portfolio/contact/" title="Contact page">
+              Contact
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="https://kristinteves.github.io/Kristin_Portfolio/projects/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+<a href="https://www.linkedin.com/in/kristin-t-a006295a/" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+<a href="https://github.com/kristinteves" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Project 4: Detecting Health Insurance Fraud</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Machine Learning Approach to Reduce Costs for Both the Insurers and the Insured
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        PROJECTS
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=https://kristinteves.github.io/Kristin_Portfolio/projects/project-04/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=https://kristinteves.github.io/Kristin_Portfolio/projects/project-04/&amp;text=Project%204:%20Detecting%20Health%20Insurance%20Fraud" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://kristinteves.github.io/Kristin_Portfolio/projects/project-04/&amp;title=Project%204:%20Detecting%20Health%20Insurance%20Fraud" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Project 4: Detecting Health Insurance Fraud</h1>
+      
+      <p class="tracked">
+          By <strong>
+          
+              Kristin Teves, Van Vu, Sara Kien
+          
+          </strong>
+      </p>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2021-03-12T11:00:59-04:00">March 12, 2021</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p><a href="https://github.com/kristinteves/Healthcare_Fraud">Link to Github</a></p>
+<h1 id="the-problem-overwhelming-costs-of-healthcare-fraud">The Problem: Overwhelming Costs of Healthcare Fraud</h1>
+<p>According to the Institute of Medicine, health insurance fraud is among the top 5 “<a href="https://jamanetwork.com/journals/jama/article-abstract/2752664">Sources of Waste</a>” in American Health Care spending (Shrank et al., 2019). A study published in the <a href="https://www.researchgate.net/publication/302362596_History_of_physicians_fighting_frivolous_lawsuits_An_overview">International Journal of Academic Medicine</a> showed that the cost of litigation and risk management is a significant expenditure associated with health care fraud, often exceeding the direct costs of fraudulent claims (Dippolito et al., 2016). The high cost of litigation can deter health insurance companies from suing potentially fraudulent providers, especially because the direct cost of fraudulent claims can be transferred to the insured in the form of higher premiums. Many insurers would be more confident about pursuing litigation if they could be assured that the case is truly fraudulent, leading to overall net savings rather than losses. Net savings would benefit both the insurer and the insured as they would, ultimately, enable insurers to set health care premiums that are more competitive in the marketplace.</p>
+<h1 id="a-solution-conservative-approaches-to-medical-claim-fraud-detection">A Solution: Conservative Approaches to Medical Claim Fraud Detection</h1>
+<p>The purpose of the present analysis is to develop a conservative approach to detection of health care fraud for private insurers that supports prevention and litigation efforts by maximizing “true positives” (i.e., correctly classifying fraudulent activity as fraudulent) and minimizing “false positives” (i.e., incorrectly classifying non-fraudulent activity as fraudulent), thereby minimizing unnecessary costs associated with erroneous litigation.</p>
+<h1 id="about-the-data">About the Data</h1>
+<p>The <a href="https://www.kaggle.com/rohitrox/healthcare-provider-fraud-detection-analysis">data</a> consisted of four separate datasets below. To get the full details of each provider, these datasets were combined into one.</p>
+<ul>
+<li>Inpatient records: over 40k records, including doctor IDs, provider IDs (clinic/hospital IDs), patient IDs, diagnosis codes, operation code, reimbursement information, etc.</li>
+<li>Outpatient records: over 500k records with similar features to inpatient records.</li>
+<li>Beneficiary records: over 130k patients with their pre-existing chronic conditions.</li>
+<li>Providers with fraudulent flags: about 9% of all providers were flagged with possible fraud.</li>
+</ul>
+<p>Considering fraud was present in only 9% of all providers in the given dataset, a skewness towards non-fraudulent providers influenced model and metric selection to avoid errors caused by imbalance classification. To mitigate the effects of imbalance classification, we used a variety of methods: adjusting the class weights for select models, stratifying the data during train test split, and evaluating other metrics beyond just ROC AUC.</p>
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_imbalance.png"/> 
+</figure>
+
+<p>As can be seen in the figures below, there is a substantially higher number of outpatient claims than inpatient claims (i.e., hospitalizations) in the data set. However, a higher proportion of inpatient claims is associated with potentially fraudulent providers, compared to outpatient claims.</p>
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_claimsbypttype.png"/> 
+</figure>
+
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_invsout.png"/> 
+</figure>
+
+<p>Furthermore, it is clear that the claims associated with potentially fraudulent providers are costly to both insurers and patients, with higher average claim reimbursements and higher average deductibles. The box-plot figure shows that the vast majority of claims associated with non-fraudulent providers cost insurers approximately $1000 to $2000 per claim, whereas a higher proportion of claims associated with potentially fraudulent providers costs upward of $4000 to $5000 per claim.</p>
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_insclaimfraud.png"/> 
+</figure>
+
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_averagecostclaim.png"/> 
+</figure>
+
+<h1 id="unsupervised-machine-learning">Unsupervised Machine Learning</h1>
+<p>Several unsupervised machine learning techniques were tested to identify potential features that can add value in predicting provider fraud, including association rule mining, LDA, and social network analysis.</p>
+<h2 id="association-rule-mining">Association Rule Mining</h2>
+<p>Association rule mining was applied to claim diagnosis codes, physicians, and chronic conditions. Among the claim diagnosis codes and physician, only values that made up more than 1% and 0.2% of all values, respectively, were used. With a low minimum support, no insightful features were found. However, with a slightly higher minimum support among chronic conditions, an association between heart failure and ischemic heart was discovered. Since this association is intuitive, no new features were created based on association rule mining.</p>
+<h2 id="latent-dirichlet-allocation">Latent Dirichlet Allocation</h2>
+<p>Likewise, latent Dirichlet allocation (LDA) confirmed the results from association rule mining. Applying LDA to the chronic conditions, diagnosis codes and procedure codes, revealed that there were no differences in allocation between two topics, fraudulent and non-fraudulent.</p>
+<h2 id="social-network-analyses">Social Network Analyses</h2>
+<p>Social Network Analyses revealed that the number of patients and the number of attending physicians associated with each provider is higher for potentially fraudulent providers than for non-fraudulent providers. In the figures below, each node represents either a provider, a patient, or an attending physician. Each line or “edge” represents a connection, either from patient to provider (Figure 1), or from physician to provider (Figure 2). The larger the node, the greater the number of connections to that node.</p>
+<p>The first figure depicts connections between patients and providers. There are larger nodes among the potentially fraudulent providers, showing that fraudulent providers are highly centralized. In other words, there is a large number of patients connected to a small number of providers (average number of patients per provider = 798). In contrast, among the non-fraudulent providers, providers are less centralized, with fewer patients distributed across a larger number of providers (average number of patients per provider = 191).</p>
+<p>Figure 1: Patients per Provider: <em>Number of patients associated with each provider is higher for potentially fraudulent providers</em></p>
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_firstsocialanalysis.png"/> 
+</figure>
+
+<p>The second figure depicts connections between attending physicians and providers (see below). The nature of the differences between fraudulent vs. non-fraudulent providers is similar when compared to the first figure, although the patterns are less obvious. Specifically, there is a larger number of physicians connected to each fraudulent provider (average number of physicians per provider = 59) than to each non-fraudulent provider (average number of physicians per provider = 30).</p>
+<p>Figure 2: Physicians per provider: <em>Number of physicians associated with each provider is higher for potentially fraudulent providers</em></p>
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_secondsocialanalysis.png"/> 
+</figure>
+
+<h1 id="feature-engineering">Feature Engineering</h1>
+<p>One notable feature that was engineered to potentially identify fraudulent providers (depicted in red below) involves submitting substantially more duplicate claims than non-fraudulent providers (depicted in blue).  This suggests that duplicate claims might be a relevant factor for detecting fraud. In this data set, duplicate claims were identified via patterns of diagnosis and claim codes.</p>
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_duplicatefreq.png"/> 
+</figure>
+
+<p>In summary, the table below includes the new features that were added to the models. As a result of these new features, several features from the original dataset were dropped, including those with large missing values. The final dataset was grouped by provider.</p>
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_featuretable.png"/> 
+</figure>
+
+<h1 id="supervised-machine-learning">Supervised Machine Learning</h1>
+<h2 id="model-selection">Model Selection</h2>
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_comparisonmodel.png"/> 
+</figure>
+
+<p>To identify cost-sensitive algorithms that will maximize true positives, metric scores of linear, nonlinear, and ensemble models were compared using k-fold cross validation. Macro scores were initially evaluated to take the average calculation of each class and to remove the influence of imbalance classes. The F1 macro scores among all models were slightly similar, at around 0.75. However, without compromising recall macro scores, the models that were ultimately chosen for further hyperparameter tuning via GridSearch include Logistic Regression (linear), Random Forest (ensemble), and Gradient Boosting (ensemble). A voting ensemble using these three models was evaluated further to determine if the model would improve.</p>
+<h2 id="determining-the-best-metrics">Determining the Best Metrics</h2>
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_metrictree.png"/> 
+</figure>
+
+<p>Due to the imbalanced classification nature of our data, with the positive class being more important and false positives more costly, we rely on F0.5 and precision as our performance metrics.</p>
+<h1 id="model-comparisons">Model Comparisons</h1>
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_modelmetriccomp.png"/> 
+</figure>
+
+<p>Since our goal is to optimize precision and F0.5, logistic regression gave us the best overall scores and the next best model is voting ensemble. Although gradient boosting gave us the highest precision score, other metrics suffered, as indicated by the lowest F0.5 score and a F1 score of less than 0.5.</p>
+<h1 id="cost-matrix-assumptions">Cost Matrix Assumptions</h1>
+<p>To approximate the cost of False Positive (FP), the potential cost of litigation, we used a <a href="https://www.uscourts.gov/sites/default/files/litigation_cost_survey_of_major_companies_0.pdf">survey</a> conducted by The U.S. Chamber Institute for Legal Reform, Litigation Cost Survey of Major Companies, which included some health insurance companies. The survey revealed that the average cost of legal fees per case completed in court can cost a minimum of $350k and an average of $2 mil. And a separate discovery fee that can cost a minimum of $100k. Discovery is the pre-trial phase in a lawsuit in which each party investigates the facts of a case through the rules of civil procedure by obtaining evidence from the opposing party. Cases tend to settle during the discovery period. We assumed the cost of each FP to be $100k as a conservative estimate. As you recall, the average insurance reimbursement of a fraudulent claim is $3800, so at minimum, a False Negative (FN) is a loss of $3800 per claim. Conversely, a True Positive (TP) that correctly identifies a fraudulent case represents a cost saving of $3800 per claim.</p>
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_feetable.png"/> 
+</figure>
+
+<h2 id="cost-matrix-logistic-regression">Cost Matrix: Logistic Regression</h2>
+<p>Savings of $40,052,000 in fraudulent claims</p>
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_costmatrix.png"/> 
+</figure>
+
+<p>Because the cost of FP or litigation is so high, it appears that it would not be worth it to sue. However, $3800 is the cost for one claim. We found that the median number of claims made by a provider flagged as potential fraudulent was 155, and the average was 420. When that many claims are involved, litigation may indeed be worthwhile. With the assumption that each fraudulent provider made 155 claims, our logistic regression model would ensure the insurer a savings of $40,520,000 for correctly identifying 68 TP with a precision of 83%.</p>
+<h1 id="feature-importance">Feature Importance</h1>
+<p>The “heat map” table below shows the feature importance results for each model. Darker blue colors represent more important features in each respective model (gradient boosting, random forest, and logistic regression).</p>
+<figure>
+    <img src="https://kristinteves.github.io/Kristin_Portfolio/images/proj04/04_heatmap.png"/> 
+</figure>
+
+<p>Based on the logistic regression model, which maximized the probability of detecting a truly fraudulent provider, the following features are important for predicting fraud:</p>
+<ul>
+<li>The number of claims, the number of duplicate claims, and the number of patients connected to providers.</li>
+<li>The number of procedure and diagnosis codes associated with a claim.</li>
+<li>Diagnosis codes 25000, 42731, and 2724, as well as procedure code 4019, are particularly important.</li>
+<li>Inpatient claims are more strongly associated with fraudulent providers than outpatient claims.</li>
+<li>There are some states that are more strongly associated with fraud than others.</li>
+</ul>
+<h1 id="conclusions">Conclusions</h1>
+<p>Using an algorithm that includes social network analysis, engineering of new features such as duplicate claims, and a logistic regression model for classification, insurance companies can be confident that approximately 83% of the cases they pursue in court will result in “True Fraud” outcomes.</p>
+<p>By applying the cost matrix analysis above, we can see that this algorithm will save private insurers tens of millions of dollars. These savings will ultimately benefit the insured and will enable private insurers to remain competitive in the marketplace.</p>
+<h1 id="future-directions">Future Directions</h1>
+<p>To estimate the cost of FP or cost litigation, we made some assumptions according to the Litigation Cost Survey of Major Companies. To determine the costs of FP more accurately, we need to obtain additional information regarding litigation expenses to better estimate the cost matrix. With more time, we would like to develop an interactive dashboard in which users can input claim and provider information and obtain a prediction regarding potential fraud.</p>
+<h1 id="references">References</h1>
+<p>Allen, Marshall. “We Asked Prosecutors if Health Insurance Companies Care About Fraud. They Laughed At Us.” ProPublica, 10 September 2019, <a href="https://www.propublica.org/article/we-asked-prosecutors-if-health-insurance-companies-care-about-fraud-they-laughed-at-us,">https://www.propublica.org/article/we-asked-prosecutors-if-health-insurance-companies-care-about-fraud-they-laughed-at-us,</a> accessed 15, February 2021</p>
+<p>Brownlee, Jason. “Tour of Evaluation Metrics for Imbalanced Classification.” Machine Learning Mastery, 8 January, 2020, <a href="https://machinelearningmastery.com/tour-of-evaluation-metrics-for-imbalanced-classification/,">https://machinelearningmastery.com/tour-of-evaluation-metrics-for-imbalanced-classification/,</a> accessed 21, February, 2021</p>
+<p>Dippolito, A., Braslow, B. M., Lombardo, G., &amp; Hoddinott, K. M. (2016). History of physicians fighting frivolous lawsuits: An overview. International Journal of Academic Medicine. <a href="https://www.researchgate.net/publication/302362596_History_of_physicians_fighting_frivolous_lawsuits_An_overview">https://www.researchgate.net/publication/302362596_History_of_physicians_fighting_frivolous_lawsuits_An_overview</a></p>
+<p>Shrank, W. H., Rogstad, T. L., &amp; Parekh, N. (2019). Waste in the US health care system: Estimated costs and potential for savings. JAMA Network. <a href="https://jamanetwork.com/journals/jama/article-abstract/2752664">https://jamanetwork.com/journals/jama/article-abstract/2752664</a></p>
+<p>Lawyers for Civil Justice, Civil Justice Reform Group, U.S. Chamber Institute for Legal Reform (2010). Litigation Cost Survey of Major Companies. <a href="https://www.uscourts.gov/sites/default/files/litigation_cost_survey_of_major_companies_0.pdf,">https://www.uscourts.gov/sites/default/files/litigation_cost_survey_of_major_companies_0.pdf,</a> accessed 26, February 2021.</p>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="https://kristinteves.github.io/Kristin_Portfolio/tags/python" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Python</a>
+   </li>
+  
+   <li class="list">
+     <a href="https://kristinteves.github.io/Kristin_Portfolio/tags/machine-learning" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Machine Learning</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="https://kristinteves.github.io/Kristin_Portfolio/projects/project-03/">Project 3: Predicting Housing Prices in Ames, Iowa</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="https://kristinteves.github.io/Kristin_Portfolio/projects/project-02/">Project 2: Web Scraping Ulta Skincare</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-gray bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://kristinteves.github.io/Kristin_Portfolio/" >
+    &copy;  Kristin Teves 2021 
+  </a>
+    <div>
+
+
+
+
+
+
+
+<a href="https://www.linkedin.com/in/kristin-t-a006295a/" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+<a href="https://github.com/kristinteves" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
+  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+</span></a>
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="https://kristinteves.github.io/Kristin_Portfolio/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

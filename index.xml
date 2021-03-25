@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data Science Portfolio on Kristin Teves</title>
+    <title>Kristin Teves&#39;s Portfolio on Kristin Teves</title>
     <link>https://kristinteves.github.io/Kristin_Portfolio/</link>
-    <description>Recent content in Data Science Portfolio on Kristin Teves</description>
+    <description>Recent content in Kristin Teves&#39;s Portfolio on Kristin Teves</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Nov 2020 11:00:59 -0400</lastBuildDate><atom:link href="https://kristinteves.github.io/Kristin_Portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Mar 2021 11:00:59 -0400</lastBuildDate><atom:link href="https://kristinteves.github.io/Kristin_Portfolio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project 4: Detecting Health Insurance Fraud</title>
+      <link>https://kristinteves.github.io/Kristin_Portfolio/projects/project-04/</link>
+      <pubDate>Fri, 12 Mar 2021 11:00:59 -0400</pubDate>
+      
+      <guid>https://kristinteves.github.io/Kristin_Portfolio/projects/project-04/</guid>
+      <description>Link to Github
+The Problem: Overwhelming Costs of Healthcare Fraud According to the Institute of Medicine, health insurance fraud is among the top 5 “Sources of Waste” in American Health Care spending (Shrank et al., 2019). A study published in the International Journal of Academic Medicine showed that the cost of litigation and risk management is a significant expenditure associated with health care fraud, often exceeding the direct costs of fraudulent claims (Dippolito et al.</description>
+    </item>
+    
+    <item>
+      <title>Project 3: Predicting Housing Prices in Ames, Iowa</title>
+      <link>https://kristinteves.github.io/Kristin_Portfolio/projects/project-03/</link>
+      <pubDate>Fri, 15 Jan 2021 11:00:59 -0400</pubDate>
+      
+      <guid>https://kristinteves.github.io/Kristin_Portfolio/projects/project-03/</guid>
+      <description>Link to Github Repository
+Background There are many qualities of a residential home that determine its worth and price outside of just the number of rooms and square footage. Taking a closer look at 81 residential variables from Ames, Iowa between 2006 to 2010, we are able to use various machine learning methods to determine features of a home in this region that are important to predict sale prices. In this regression analysis, the R2 value across select regression models helped determine which model best fit the dataset and predicted housing prices.</description>
+    </item>
+    
     <item>
       <title>Project 2: Web Scraping Ulta Skincare</title>
       <link>https://kristinteves.github.io/Kristin_Portfolio/projects/project-02/</link>
       <pubDate>Thu, 19 Nov 2020 11:00:59 -0400</pubDate>
       
       <guid>https://kristinteves.github.io/Kristin_Portfolio/projects/project-02/</guid>
-      <description>Background A normal skincare routine is important for maintaining healthy and youthful skin, regardless of age. Ulta Beauty is a specialized beauty store known for carrying affordable cosmetic, fragrance, and skincare products. Ulta differentiates itself from its competitors by carrying many mid-tier, drugstore brands, which is important for consumers on a budget or those that may be starting a skincare regiment. This web scraping project explores the skincare segmentation of Ulta Beauty and the products and characteristics of each category.</description>
+      <description>Link to Github Repository
+Background A normal skincare routine is important for maintaining healthy and youthful skin, regardless of age. Ulta Beauty is a specialized beauty store known for carrying affordable cosmetic, fragrance, and skincare products. Ulta differentiates itself from its competitors by carrying many mid-tier, drugstore brands, which is important for consumers on a budget or those that may be starting a skincare regiment. This web scraping project explores the skincare segmentation of Ulta Beauty and the products and characteristics of each category.</description>
     </item>
     
     <item>
@@ -22,7 +43,9 @@
       <pubDate>Wed, 07 Oct 2020 10:58:08 -0400</pubDate>
       
       <guid>https://kristinteves.github.io/Kristin_Portfolio/projects/project-01/</guid>
-      <description>Background   Google Play Store consists of numerous applications within varying categories. The digital distribution service for Android grants users access to millions of apps, in a number of categories, including many family, gaming, and tool, to name a few. There were approximately 2.7 million applications available as of February 2017. The scraped Kaggle data reveals the state of the Google Play Store as of 2018. The dataset highlights 33 categories in the Google Play Store that developers can explore for potential business growth.</description>
+      <description>Link to Github Repository
+Link to Shiny App
+Background   Google Play Store consists of numerous applications within varying categories. The digital distribution service for Android grants users access to millions of apps, in a number of categories, including many family, gaming, and tool, to name a few. There were approximately 2.7 million applications available as of February 2017. The scraped Kaggle data reveals the state of the Google Play Store as of 2018.</description>
     </item>
     
     <item>
